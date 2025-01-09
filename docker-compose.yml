@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  openvscode-server:
+    build:
+      context: .
+      network: host
+    ports:
+      - "127.0.0.1:3000:3000"
+    volumes:
+      # Mount your project folder into the container
+      - .:/home/workspace
+    environment:
+      - PASSWORD=your_password
+    restart: always
