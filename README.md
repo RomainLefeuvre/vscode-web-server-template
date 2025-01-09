@@ -42,19 +42,23 @@
 
 
 ## About The Project
-This project provides a template for self-hosted web IDE, enabling end user to setup development environment in one command.
+This project provides a template for self-hosted web IDE, enabling end user to set up development environment in one command.
 
-It describes how to setup the execution environment, deploy an instance of vscode server https://github.com/gitpod-io/openvscode-server and trigger command at the opening of the browser.
+It describes how to customize the execution environment, deploy an instance of VS Code server https://github.com/gitpod-io/openvscode-server and trigger command at the opening of the browser.
 
-The main advantage of this template is that it provide a full tutorial to provide web ide that :
+The main advantage of this template is that it provide a full tutorial to provide web IDE that :
 * provide custom dev environment
 * install extension needed 
 * launch automatically some commands at startup 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Exemple
+An exemple of the usage of the template can be found at https://anonymous.4open.science/r/MSR_2025-6776/README.md
+
+
 ## Prerequisites
-The only prerequiste is Docker
+The only prerequisite is Docker
 
 If you do not have docker, install it : [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -63,8 +67,8 @@ If you do not have docker, install it : [https://docs.docker.com/engine/install/
 ### I- Add your code
 Add your code at the root of this project 
 
-### II- Update the dev envrionment
-The provided environment is an ubuntu image, you can customize the [Dockerfile](./Dockerfile) to install the software you need in the development environment (For instance here Java, maven ...) :
+### II- Update the dev environment
+The provided environment is an Ubuntu image,  you can customize the [Dockerfile](./Dockerfile) to install the software you need in the development environment (For instance here Java, maven ...) :
 
 ```
 Dockerfile
@@ -83,8 +87,15 @@ RUN apt-get install -y maven
 ####################################################################
 ...
 ```
-### III- Update the list of extension that will be provided by default
-To make the environement ready to use for end user, you can install automatically the needed extensions. 
+
+Note: You can use the Dev Container library, which describes various Docker images for specific environments, as an inspiration source.
+> https://github.com/devcontainers/images
+
+For instance the java Dockerfile :
+>https://github.com/devcontainers/images/blob/main/src/java/.devcontainer/Dockerfile
+
+### III - Update the list of extension that will be provided by default
+To make the environment ready to use for end user, you can install automatically the needed extensions. 
 To add an extension modify the ENTRYPOINT command of the [Dockerfile](./Dockerfile) and add a new line "--install-extension {your extension id}" (For instance here the java-pack) :
 ```
 Dockerfile 
@@ -97,6 +108,9 @@ ENTRYPOINT [ "/bin/sh", "-c", "exec ${OPENVSCODE_SERVER_ROOT}/bin/openvscode-ser
                                                                  --start-server\
                                                                  --default-folder /home/workspace", "--" ]
 ```
+Note: The Dev Container library also reference the usefull extension for your environment, here java :
+> https://github.com/devcontainers/images/blob/main/src/java/.devcontainer/devcontainer.json
+
 
 ### IV- Add command launch at startup
 If you want to automatically launch command at startup, you can add your command in [.init](./.init)
@@ -123,6 +137,11 @@ Then you can access the web IDE with :
 Tada !
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+## Road Map
+
+* support devcontainer descriptor
+https://github.com/gitpod-io/gitpod/issues/7721
+https://github.com/devcontainers/cli#try-it-out
 ## License
 
 Distributed under the project_license. See `LICENSE.txt` for more information.
