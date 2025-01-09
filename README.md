@@ -34,9 +34,12 @@
     <li>
       <a href="#about-the-project">About The Project</a>
     </li>
+    
     <li><a href="#prerequisites">Prerequisites</a></li>
-    <li><a href="#installation">Installation</a></li>
+    <li><a href="#Exemple">Exemple</a></li>
+    <li><a href="#Designing-Web-IDE-environment">Designing Web IDE environmentn</a></li>
     <li><a href="#usage">Usage</a></li>
+    <li><a href="#roadmap">Roadmap</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
@@ -55,15 +58,16 @@ The main advantage of this template is that it provide a full tutorial to provid
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Exemple
-An exemple of the usage of the template can be found at https://anonymous.4open.science/r/MSR_2025-6776/README.md
-
-
 ## Prerequisites
 The only prerequisite is Docker
 
 If you do not have docker, install it : [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## Exemple
+An exemple of the usage of the template can be found at https://anonymous.4open.science/r/MSR_2025-6776/README.md
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## Designing Web IDE environment 
 ### I- Add your code
@@ -139,11 +143,14 @@ Then you can access the web IDE with :
 Tada !
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## Road Map
+## Roadmap
 
 * support devcontainer descriptor
 https://github.com/gitpod-io/gitpod/issues/7721
 https://github.com/devcontainers/cli#try-it-out
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
 ## License
 
 Distributed under the project_license. See `LICENSE.txt` for more information.
