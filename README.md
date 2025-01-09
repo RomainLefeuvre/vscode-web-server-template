@@ -57,6 +57,7 @@ The main advantage of this template is that it provide a full tutorial to provid
 The only prerequiste is Docker
 
 If you do not have docker, install it : [https://docs.docker.com/engine/install/](https://docs.docker.com/engine/install/)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Designing Web IDE environment 
 ### I- Add your code
@@ -106,6 +107,7 @@ mvn clean package
 ```
 Note that this feature is provided by the custom extension : [StartupTask](https://github.com/RomainLefeuvre/vs-code-startup-extension)
 
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## Usage
 To start your environment you just have to run : 
@@ -119,6 +121,7 @@ Then you can access the web IDE with :
 >[http://localhost:3000](http://localhost:3000)
 
 Tada !
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## License
 
